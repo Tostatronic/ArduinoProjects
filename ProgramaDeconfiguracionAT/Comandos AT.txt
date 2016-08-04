@@ -1,0 +1,23 @@
+Bluetooth Esclavo
+
+AT
+AT+NAME=BTEsclavoTostatronic
+AT+PSWD=0000
+AT+UART=9600,0,0
+AT+ROLE=0 (Para 0 significa Esclavo y 1 Significa Maestro)
+AT+CMODE=1 (el 1 le permite conectarse con cualquier MAC(Direccion Fisica) y 0 solo le permite conectarse
+con una MAC en particular)
+AT+ADDR (Sentencia para extraer la direccion MAC de este bluetooth)
+
+MAC:2016,5,310042
+
+Bluetooth Maestro
+
+AT
+AT+NAME=BTMaestroTostatronic
+AT+PSWD=0000
+AT+UART=9600,0,0
+AT+ROLE=1 (Para 0 significa Esclavo y 1 Significa Maestro)
+AT+CMODE=0 (el 1 le permite conectarse con cualquier MAC(Direccion Fisica) y 0 solo le permite conectarse
+con una MAC en particular)
+AT+BIND= ????//Aqui se pone la mac del dispositivo esclavo, recordemos que se debemos de cambiar los ":" por ","
